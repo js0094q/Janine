@@ -1,5 +1,18 @@
 const toggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('#site-nav');
+const logoImg = document.querySelector('.hero-logo img');
+const logoFallback = document.querySelector('.logo-fallback');
+
+if (logoImg && logoFallback) {
+  logoImg.addEventListener('load', () => {
+    logoFallback.style.display = 'none';
+  });
+
+  logoImg.addEventListener('error', () => {
+    logoImg.style.display = 'none';
+    logoFallback.style.display = 'block';
+  });
+}
 
 if (toggle && nav) {
   toggle.addEventListener('click', () => {

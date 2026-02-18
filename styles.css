@@ -1,12 +1,13 @@
 :root {
-  --bg: #f6f1ea;
-  --panel: #fffdf8;
-  --ink: #1d2228;
-  --muted: #6d6a66;
-  --brand: #005f5f;
-  --accent: #c96f46;
-  --line: #ded6cb;
-  --shadow: 0 12px 40px rgba(36, 35, 33, 0.1);
+  --bg: #f4f7f2;
+  --panel: #ffffff;
+  --ink: #1d241f;
+  --muted: #5f6b63;
+  --brand: #4ca541;
+  --brand-deep: #3b7f33;
+  --accent: #91b745;
+  --line: #d5dfd1;
+  --shadow: 0 10px 32px rgba(40, 56, 37, 0.08);
 }
 
 * {
@@ -22,8 +23,8 @@ body {
   font-family: "Manrope", "Avenir Next", sans-serif;
   color: var(--ink);
   background:
-    radial-gradient(circle at 80% 0%, rgba(201, 111, 70, 0.18), transparent 40%),
-    radial-gradient(circle at 0% 20%, rgba(0, 95, 95, 0.16), transparent 45%),
+    radial-gradient(circle at 10% 0%, rgba(76, 165, 65, 0.1), transparent 40%),
+    radial-gradient(circle at 100% 20%, rgba(145, 183, 69, 0.1), transparent 45%),
     var(--bg);
   line-height: 1.65;
 }
@@ -38,7 +39,7 @@ body {
   gap: 1rem;
   padding: 1rem 5vw;
   backdrop-filter: blur(10px);
-  background: rgba(246, 241, 234, 0.9);
+  background: rgba(244, 247, 242, 0.9);
   border-bottom: 1px solid var(--line);
 }
 
@@ -71,7 +72,7 @@ body {
   height: 1px;
   transform: scaleX(0);
   transform-origin: left;
-  background: var(--brand);
+  background: var(--brand-deep);
   transition: transform 180ms ease;
 }
 
@@ -101,10 +102,36 @@ body {
   align-content: center;
 }
 
+.hero-logo {
+  margin-bottom: 1rem;
+  display: grid;
+  justify-items: start;
+}
+
+.hero-logo img {
+  width: min(440px, 72vw);
+  height: auto;
+  display: block;
+  border-radius: 0.75rem;
+}
+
+.logo-fallback {
+  display: none;
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  letter-spacing: 0.03em;
+  color: var(--brand-deep);
+}
+
+.hero-logo img + .logo-fallback {
+  margin-top: 0.45rem;
+  font-size: 0.95rem;
+}
+
 .eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--brand);
+  color: var(--brand-deep);
   font-size: 0.85rem;
   margin-bottom: 0.3rem;
 }
@@ -129,14 +156,14 @@ h2 {
 .lead {
   margin: 0.35rem 0;
   font-size: clamp(1.05rem, 2.2vw, 1.4rem);
-  color: #2a3138;
+  color: #2a352d;
 }
 
 .hero-quote {
   margin-top: 2rem;
   padding: 1.25rem;
-  border-left: 3px solid var(--accent);
-  background: rgba(255, 253, 248, 0.75);
+  border-left: 3px solid var(--brand);
+  background: rgba(255, 255, 255, 0.75);
   box-shadow: var(--shadow);
   max-width: 70ch;
 }
@@ -171,6 +198,10 @@ h2 {
   padding: 1.25rem;
 }
 
+.card {
+  border-top: 4px solid var(--accent);
+}
+
 .card h3 {
   margin: 0;
 }
@@ -197,7 +228,7 @@ h2 {
 }
 
 a {
-  color: var(--brand);
+  color: var(--brand-deep);
 }
 
 .site-footer {
@@ -249,5 +280,9 @@ a {
   .hero {
     min-height: auto;
     padding-top: 3.5rem;
+  }
+
+  .hero-logo img {
+    width: min(360px, 84vw);
   }
 }
