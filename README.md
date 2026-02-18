@@ -62,7 +62,7 @@ git push -u origin main
 - `index.html`: Content + structure + SEO metadata + structured data
 - `styles.css`: Visual system and responsive styles
 - `script.js`: Mobile nav + reveal animations
-- `logo.png`: Brand logo image shown prominently in hero (add this file at project root)
+- `logo.avif`: Brand logo image shown prominently in hero (add this file at project root)
 - `robots.txt`: Crawler directives
 - `sitemap.xml`: Indexable URL list
 
