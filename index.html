@@ -25,7 +25,7 @@
       hreflang="en-us"
       href="https://www.janinestandish.com/"
     />
-    <link rel="icon" href="logo-3.avif" type="image/avif" />
+   <link rel="icon" href="logo-3.jpg" type="image/jpeg" />
 
     <!-- Open Graph -->
     <meta property="og:locale" content="en_US" />
@@ -44,7 +44,7 @@
       property="og:image"
       content="https://www.janinestandish.com/logo-3.avif"
     />
-    <meta property="og:image:alt" content="Janine Standish Wellness logo" />
+   <meta property="og:image" content="https://www.janinestandish.com/logo-3.jpg" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -56,10 +56,7 @@
       name="twitter:description"
       content="Counseling, couples support, yoga, and mindfulness coaching with Janine Standish, M.A., Ed.S., LPC in Midland Park, NJ."
     />
-    <meta
-      name="twitter:image"
-      content="https://www.janinestandish.com/logo-3.avif"
-    />
+    <meta name="twitter:image" content="https://www.janinestandish.com/logo-3.jpg" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -87,7 +84,7 @@
             "url": "https://www.janinestandish.com/",
             "telephone": "+1-201-282-6720",
             "email": "jstandishwellness@gmail.com",
-            "image": "https://www.janinestandish.com/logo-3.avif",
+           "image": "https://www.janinestandish.com/logo-3.jpg",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "700 Godwin Avenue, Suite 230",
@@ -175,8 +172,11 @@
         <div class="hero-grid">
           <div class="hero-copy">
             <div class="hero-logo">
-              <img src="logo-3.avif" alt="Janine Standish Wellness logo" />
-              <p class="logo-fallback">Janine Standish Wellness, LLC</p>
+            <picture>
+            <source srcset="logo-3.avif" type="image/avif" />
+            <img src="logo-3.jpg" alt="Janine Standish Wellness logo" loading="eager" />
+            </picture>
+            <p class="logo-fallback">Janine Standish Wellness, LLC</p>
             </div>
             <p class="eyebrow">Janine Standish, M.A., Ed.S., LPC</p>
             <h1>Licensed Professional Counselor</h1>
